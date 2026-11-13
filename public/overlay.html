@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gift Stage Overlay</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body class="overlay-page">
+    <main id="stage" class="stage">
+      <div id="effects" class="effects"></div>
+      <header class="overlay-header">
+        <div class="game-title">
+          <span class="crown">✦</span>
+          <div>
+            <p class="eyebrow">LIVE GIFT GAME</p>
+            <h1>GIFT STAGE</h1>
+          </div>
+        </div>
+        <div id="connection-status" class="live-pill" data-state="waiting">กำลังเชื่อมต่อ...</div>
+      </header>
+
+      <section class="score-card" aria-label="คะแนน">
+        <span class="score-label">CHEER POWER</span>
+        <strong id="score">0</strong>
+        <span class="score-caption">แต้มพลังจาก Gift</span>
+      </section>
+
+      <section class="spotlight" aria-live="polite">
+        <div class="spotlight-ring"></div>
+        <div class="spotlight-content">
+          <span class="spotlight-icon">🎁</span>
+          <p id="gift-event" class="event-title">รอ Gift แรกจากคนดู</p>
+          <p id="gift-name" class="gift-name">เวทีพร้อมแล้ว!</p>
+          <p id="gift-sender" class="gift-sender">ส่ง Gift เพื่อเริ่มความสนุก</p>
+        </div>
+      </section>
+
+      <aside class="activity-card">
+        <p class="eyebrow">RECENT GIFTS</p>
+        <ul id="activity-list"><li>รอผู้ชมส่ง Gift...</li></ul>
+      </aside>
+      <footer class="overlay-footer">ส่ง Gift เพื่อเพิ่มพลังให้เวที!</footer>
+    </main>
+    <script type="module" src="/assets/overlay.js"></script>
+  </body>
+</html>

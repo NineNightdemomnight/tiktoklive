@@ -1,0 +1,28 @@
+{
+  "name": "tiklive-gift-overlay",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "npm run build && tsx src/server.ts",
+    "typecheck": "tsc -p tsconfig.server.json --noEmit && tsc -p tsconfig.client.json --noEmit",
+    "build": "npm run typecheck && esbuild src/client/control.ts src/client/overlay.ts --bundle --format=esm --outdir=public/assets && tsc -p tsconfig.server.json",
+    "start": "node dist/server.js"
+  },
+  "dependencies": {
+    "three": "^0.187.0",
+    "tiktok-live-connector": "2.5.0",
+    "ws": "^8.18.3"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.0",
+    "@types/three": "^0.187.0",
+    "@types/ws": "^8.18.1",
+    "esbuild": "^0.27.0",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
+  }
+}

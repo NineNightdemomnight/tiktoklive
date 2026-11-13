@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TikLive Gift Game - Control</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body class="control-page">
+    <main class="control-shell">
+      <header class="brand">
+        <div class="brand-mark">LIVE</div>
+        <div>
+          <p class="eyebrow">TIKTOK LIVE GAME</p>
+          <h1>Gift Stage</h1>
+        </div>
+      </header>
+
+      <section class="panel">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">CONNECTION</p>
+            <h2>เชื่อม TikTok LIVE</h2>
+          </div>
+          <span id="status-badge" class="status-badge" data-state="disconnected">DISCONNECTED</span>
+        </div>
+        <label for="username">TikTok Username หรือ URL LIVE</label>
+        <div class="connect-row">
+          <input id="username" type="text" placeholder="@username หรือ tiktok.com/@username/live" autocomplete="off">
+          <button id="connect" class="button button-primary">เชื่อมต่อ</button>
+          <button id="disconnect" class="button button-secondary" disabled>หยุด</button>
+        </div>
+        <p id="status-message" class="status-message">ยังไม่ได้เชื่อมต่อ</p>
+      </section>
+
+      <section class="panel overlay-panel">
+        <div>
+          <p class="eyebrow">TIKTOK LIVE STUDIO</p>
+          <h2>URL สำหรับเพิ่มเป็น Link source</h2>
+          <p class="help">คัดลอก URL นี้ไปวางในหน้าต่าง Add link ของ TikTok LIVE Studio</p>
+        </div>
+        <div class="url-row">
+          <input id="overlay-url" type="text" readonly>
+          <button id="copy-url" class="button button-primary">คัดลอก URL</button>
+        </div>
+        <div class="studio-steps">
+          <span>1 · Add source</span>
+          <span>2 · Link</span>
+          <span>3 · วาง URL แล้วกด Add source</span>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">LOCAL TEST</p>
+            <h2>ทดสอบการแสดงผล</h2>
+          </div>
+          <button id="test-gift" class="button button-secondary">ส่ง Gift ทดสอบ 🌹</button>
+        </div>
+        <ul id="recent-events" class="recent-events">
+          <li>Gift ที่ได้รับจะแสดงที่นี่</li>
+        </ul>
+      </section>
+
+      <p class="footnote">ทำงานในเครื่องนี้เท่านั้น · ต้องเปิดหน้านี้ค้างไว้ขณะไลฟ์</p>
+    </main>
+    <script>window.liveControlKey = "__CONTROL_KEY__";</script>
+    <script type="module" src="/assets/control.js"></script>
+  </body>
+</html>
